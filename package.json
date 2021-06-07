@@ -3,11 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "check-node-version --package",
     "dev": "next dev",
     "build": "next build",
+    "prestart": "check-node-version --package",
     "start": "next start"
   },
+  "engines": {
+    "node": "~14",
+    "npm": "~6.14"
+  },
   "dependencies": {
+    "check-node-version": "^4.1.0",
     "next": "10.2.3",
     "react": "17.0.2",
     "react-dom": "17.0.2"
