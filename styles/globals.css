@@ -103,3 +103,7 @@ footer {
 .util-highlight {
   color: #0068bf;
 }
+
+a.util-highlight {
+  text-decoration: none;
+}
