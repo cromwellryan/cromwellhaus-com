@@ -8,6 +8,13 @@
   src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
 }
 
+@font-face {
+  font-family: fancy;
+  font-style: normal;
+  font-weight: 300;
+  src: local("Open Sans"), local("Helvetica Neue"), local("Helvetica"), local("Arial"), local("sans-serif");
+}
+
 /* Now, let's apply it on an element */
 body {
   font-family: "system";
@@ -53,7 +60,10 @@ a {
 }
 
 .header__link-home {
-  
+  font-family: system;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: none;
 }
 
 .header__nav {
