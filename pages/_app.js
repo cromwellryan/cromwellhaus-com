@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
             Ryan Cromwell
           </a>
           <nav className="header__nav">
-            <a className="nav__link" href="/blog">Blog</a>
+            <a className="nav__link" href="/about">About</a>
           </nav>
         </div>
       </header>

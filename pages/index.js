@@ -24,14 +24,7 @@ export default function Home() {
         <link rel='canonical' href="https://cromwellhaus.com" />
       </Head>
 
-      <main>
-        <p>Hi!</p>
-        <p>Father of 4. Leading the development team @Sparkbox. Fly fishing when I can.</p>
-      </main>
-
       <section className={styles.section}>
-        <h2>Recent posts</h2>
-
         <article>
           <a href="#" className={styles.recentPostTitle}>Traits of a Build and Deployment Pipeline</a>
           <p>A great software build and deployment pipeline encourages collaboration and transparency. Here's what we have found makes a successful pipeline.</p>
