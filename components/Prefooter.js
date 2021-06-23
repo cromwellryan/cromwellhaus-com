@@ -2,8 +2,8 @@ export default function Prefooter() {
   return (
     <section className="prefooter">
       <div className="onecoolthing">
-        <h3 className="onecoolthing__header">Cool <span className="util-highlight">Tech</span> Thing</h3>
-        <p className="onecoolthing__body">Way to get to the bottom. If you leave here with nothing else, check out this one cool thing.</p>
+        <h3 className="onecoolthing__header">Cool <a href="https://github.com/containrrr/watchtower" className="util-highlight">Tech</a> Thing</h3>
+        <p className="onecoolthing__body"><a href="https://github.com/containrrr/watchtower">Watchtower</a> has me excited for a Heroku for Docker. This is a big deal if you know <a href="https://sparkbox.com/foundry/successful_software_build_and_deployment_pipelines">how I feel about deploy pipelines</a>.</p>
       </div>
 
       <div className="onecoolthing">
