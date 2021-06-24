@@ -1,7 +1,36 @@
 import Head from 'next/head'
+
+import ExternalContentArticle from '../components/ExternalContentArticle';
+
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+async function getRecentContent(count = 5) {
+  const spaceId = 'w95trmn9jf9t';
+  const environmentId = 'master';
+  const accessToken = 'ouK7MFBRjJwXVRsj1jAV0s-O-nHOPHpC6lletlb_wHs';
+
+  const limit = count < 25 ? count : 25;
+
+  const url = `https://cdn.contentful.com/spaces/${spaceId}/environments/${environmentId}/entries?access_token=${accessToken}&limit=${count}`;
+  const res = await fetch(url)
+  const data = await res.json()
+
+  return data.items;
+}
+
+function articleForContent(content) {
+  switch(content.sys.contentType.sys.id) {
+    case 'externalContent':
+      return <ExternalContentArticle key={content.sys.id} fields={content.fields} />
+    default:
+      return null;
+  }
+}
+
+export default function Home({recentContent}) {
+  const articles = recentContent
+    .map(articleForContent);
+
   return (
     <div>
 
@@ -25,17 +54,15 @@ export default function Home() {
       </Head>
 
       <section className={styles.section}>
-        <article>
-          <a href="#" className={styles.recentPostTitle}>Traits of a Build and Deployment Pipeline</a>
-          <p>A great software build and deployment pipeline encourages collaboration and transparency. Here's what we have found makes a successful pipeline.</p>
-        </article>
-
-        <article>
-          <a href="#" className={styles.recentPostTitle}>Enabling a Data Science Team Case Study</a>
-          <p>How do you bring data to life? We worked with an internal team of data scientists to bring their thoughts into code with a solid prototype for testing out ideas.</p>
-        </article>
+        {articles}
       </section>
 
     </div>
   )
+}
+
+Home.getInitialProps = async (ctx) => {
+  const recentContent = await getRecentContent(3);
+
+  return { recentContent };
 }

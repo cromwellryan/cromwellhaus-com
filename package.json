@@ -14,6 +14,7 @@
     "npm": "~6.14"
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^15.0.0",
     "check-node-version": "^4.1.0",
     "next": "10.2.3",
     "react": "17.0.2",
