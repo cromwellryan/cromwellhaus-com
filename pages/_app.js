@@ -40,7 +40,9 @@ function MyApp({ Component, pageProps }) {
       </header>
 
       <main className="body-content">
-        <Component {...pageProps} />
+        <div className="body-container">
+          <Component {...pageProps} />
+        </div>
       </main>
 
       <Prefooter />
