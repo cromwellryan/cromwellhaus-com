@@ -30,13 +30,11 @@ export default function Home({recentContent}) {
     .map(articleForContent);
 
   return (
-    <div>
-
+    <>
       <section className={styles.section}>
         {articles}
       </section>
-
-    </div>
+    </>
   )
 }
 

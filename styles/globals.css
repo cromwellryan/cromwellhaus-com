@@ -8,14 +8,6 @@
   src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
 }
 
-@font-face {
-  font-family: fancy;
-  font-style: normal;
-  font-weight: 300;
-  src: local("Open Sans"), local("Helvetica Neue"), local("Helvetica"), local("Arial"), local("sans-serif");
-}
-
-/* Now, let's apply it on an element */
 body {
   font-family: "system";
   background: #ffffff;
@@ -23,11 +15,12 @@ body {
   margin: 0rem;
 }
 
-h1 { font-size: 1.5rem; }
+h1 { font-size: 1.3rem; }
 h2 { font-size: 1.2rem; }
 
 .body-content {
-  padding: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
   max-width: 48rem;
 }
 

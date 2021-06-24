@@ -39,9 +39,9 @@ function MyApp({ Component, pageProps }) {
         </div>
       </header>
 
-      <section className="body-content">
+      <main className="body-content">
         <Component {...pageProps} />
-      </section>
+      </main>
 
       <Prefooter />
 
