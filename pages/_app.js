@@ -28,9 +28,11 @@ function MyApp({ Component, pageProps }) {
 
       <header className="header">
         <div className="header__container">
-          <a className="header__link-home" aria-label="Link to Home" title="Link to Home" href="/">
-            Ryan Cromwell
-          </a>
+          <h1 className="header__link-home">
+            <a aria-label="Link to Home" className="header__link-home" title="Link to Home" href="/">
+              Ryan Cromwell
+            </a>
+          </h1>
           <nav className="header__nav">
             <a className="nav__link" href="/about">About</a>
           </nav>
