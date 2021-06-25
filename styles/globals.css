@@ -84,7 +84,6 @@ a {
   width: 100%;
   min-height: 18em;
 
-  padding: 2em;
   margin-top: 4em;
 
   border-top: solid #e4e4e4 1px; 
@@ -95,22 +94,28 @@ a {
   justify-content: center;
 }
 
+.prefooter__container { 
+  margin: 2rem;
+}
+
+.onecoolthing {
+  margin-bottom: 3rem;
+}
+
+.onecoolthing__header {
+}
+
 @media screen and (min-width: 730px) {
   .prefooter__container {
     max-width: 88rem;
     display: grid;
     grid-template-columns: 2fr 2fr;
+    grid-gap: 3rem;
+  }
+
+  .onecoolthing {
   }
 }
-
-.onecoolthing {
-  margin-right: 3em;
-}
-
-.onecoolthing__header {
-  margin-top: 3em;
-}
-
 
 
 footer {
