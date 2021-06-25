@@ -1,15 +1,6 @@
-/* Define the "system" font family 
- * h/t css-tricks: https://css-tricks.com/snippets/css/system-font-stack/
- * */
-@font-face {
-  font-family: system;
-  font-style: normal;
-  font-weight: 300;
-  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
-}
-
+/* Using the system font stack b/c we feel the need... the need for speed */
 body {
-  font-family: "system";
+  font-family: "system-ui";
   background: #ffffff;
 
   margin: 0rem;
@@ -66,8 +57,7 @@ a {
 }
 
 .header__link-home {
-  font-family: system;
-  font-weight: bold;
+  font-family: "system-ui";
   font-size: 1.1rem;
   text-decoration: none;
 }
