@@ -1,9 +1,9 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
-import styles from '../styles/ExternalContentArticle.module.css'
+import styles from '../styles/Article.module.css'
 
 
-export default function ExternalContentArticle({fields}) {
+function ExternalContentArticle({fields}) {
   return (
     <article className={styles.article}>
       <h2 className={styles.title}><a className={styles.link} href={fields.url}>{fields.title}</a></h2>
@@ -12,3 +12,7 @@ export default function ExternalContentArticle({fields}) {
   );
 }
 
+
+ExternalContentArticle.contentTypeId = 'externalContent';
+
+export default ExternalContentArticle;

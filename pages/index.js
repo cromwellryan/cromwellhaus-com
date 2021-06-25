@@ -18,7 +18,7 @@ async function getRecentContent(count = 5) {
 
 function articleForContent(content) {
   switch(content.sys.contentType.sys.id) {
-    case 'externalContent':
+    case ExternalContentArticle.contentTypeId:
       return <ExternalContentArticle key={content.sys.id} fields={content.fields} />
     default:
       return null;
