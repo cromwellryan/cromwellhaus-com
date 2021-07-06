@@ -50,7 +50,7 @@ function MyApp({ Component, pageProps }) {
       <Prefooter />
 
 
-      <footer class="footer">
+      <footer className="footer">
         <div class="footer__container">
           &copy;2021 Ryan Cromwell
 
