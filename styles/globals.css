@@ -132,6 +132,14 @@ a {
   justify-content: space-between;
 }
 
+.footer__social {
+}
+
+.footer__social--link {
+  margin-left: 0.6em;
+  margin-right: 0.6em;
+}
+
 .util-highlight {
   color: #0068bf;
 }

@@ -3,6 +3,7 @@ import Image from 'next/image'
 
 import '../styles/globals.css'
 import GithubIcon from '../components/GithubIcon'
+import LinkedInIcon from '../components/LinkedInIcon'
 import Prefooter from '../components/Prefooter'
 
 function MyApp({ Component, pageProps }) {
@@ -53,9 +54,13 @@ function MyApp({ Component, pageProps }) {
         <div class="footer__container">
           &copy;2021 Ryan Cromwell
 
-          <a href="https://github.com/cromwellryan"><GithubIcon /></a>
+          <nav className="footer__social">
+            <a className="footer__social--link" href="https://www.linkedin.com/in/cromwellryan/"><LinkedInIcon size="24px"/></a>
+            <a className="footer__social--link" href="https://github.com/cromwellryan"><GithubIcon size="24px"/></a>
+          </nav>
         </div>
       </footer>
+
     </div>
   )
 }
