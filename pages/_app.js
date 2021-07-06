@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 import '../styles/globals.css'
+import GithubIcon from '../components/GithubIcon'
 import Prefooter from '../components/Prefooter'
 
 function MyApp({ Component, pageProps }) {
@@ -48,8 +49,12 @@ function MyApp({ Component, pageProps }) {
       <Prefooter />
 
 
-      <footer>
-        &copy;2021 Ryan Cromwell
+      <footer class="footer">
+        <div class="footer__container">
+          &copy;2021 Ryan Cromwell
+
+          <a href="https://github.com/cromwellryan"><GithubIcon /></a>
+        </div>
       </footer>
     </div>
   )

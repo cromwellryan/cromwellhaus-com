@@ -28,7 +28,7 @@ a {
 
 .header {
   border-top: solid #333 2px;
-  border-bottom: solid #e4e4e4 1px; 
+  border-bottom: solid #e4e4e4 1px;
   background: #f3f3f3;
 
   margin-bottom: 3rem;
@@ -38,8 +38,7 @@ a {
   justify-content: center;
 }
 
-.header__container { 
-
+.header__container {
   padding-left: 2em;
   padding-right: 2em;
 
@@ -76,15 +75,15 @@ a {
 
   margin-top: 4em;
 
-  border-top: solid #e4e4e4 1px; 
-  border-bottom: solid #e4e4e4 1px; 
+  border-top: solid #e4e4e4 1px;
+  border-bottom: solid #e4e4e4 1px;
   background: #f0efeb;
 
   display: flex;
   justify-content: center;
 }
 
-.prefooter__container { 
+.prefooter__container {
   margin: 2rem;
 }
 
@@ -109,12 +108,28 @@ a {
 }
 
 
-footer {
+.footer {
   font-size: .9rem;
   color: #555;
-  padding-left: 2rem;
+
   padding-top: 1rem;
   padding-bottom: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__container {
+  padding-left: 2em;
+  padding-right: 2em;
+
+  width: 100%;
+  max-width: 48rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .util-highlight {
