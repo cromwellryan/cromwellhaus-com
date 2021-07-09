@@ -51,7 +51,7 @@ function MyApp({ Component, pageProps }) {
 
 
       <footer className="footer">
-        <div class="footer__container">
+        <div className="footer__container">
           &copy;2021 Ryan Cromwell
 
           <nav className="footer__social">
