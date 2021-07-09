@@ -1,12 +1,11 @@
 import ExternalContentArticle from '../components/ExternalContentArticle';
+import PostArticle from '../components/PostArticle';
+
+import { spaceId, environmentId, accessToken } from '../contentful';
 
 import styles from '../styles/Home.module.css'
 
 async function getRecentContent(count = 5) {
-  const spaceId = 'w95trmn9jf9t';
-  const environmentId = 'master';
-  const accessToken = 'ouK7MFBRjJwXVRsj1jAV0s-O-nHOPHpC6lletlb_wHs';
-
   const limit = count < 25 ? count : 25;
 
   const url = `https://cdn.contentful.com/spaces/${spaceId}/environments/${environmentId}/entries?access_token=${accessToken}&limit=${count}`;
@@ -20,6 +19,8 @@ function articleForContent(content) {
   switch(content.sys.contentType.sys.id) {
     case ExternalContentArticle.contentTypeId:
       return <ExternalContentArticle key={content.sys.id} fields={content.fields} />
+    case PostArticle.contentTypeId:
+      return <PostArticle key={content.sys.id} fields={content.fields} />
     default:
       return null;
   }
@@ -32,6 +33,7 @@ export default function Home({recentContent}) {
   return (
     <>
       <section className={styles.section}>
+        <h2>Recent thoughts, talks, and publications</h2>
         {articles}
       </section>
     </>
