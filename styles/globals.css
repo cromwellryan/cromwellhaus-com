@@ -9,6 +9,13 @@ body {
 h1 { font-size: 1.3rem; }
 h2 { font-size: 1.2rem; }
 
+pre {
+  overflow: scroll;
+  margin-left: 1.5rem;
+  margin-top: 1.8rem;
+  margin-bottom: 1.8rem;
+}
+
 .body-content {
   display: flex;
   justify-content: center;
