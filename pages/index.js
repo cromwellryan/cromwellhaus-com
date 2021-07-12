@@ -1,19 +1,9 @@
 import ExternalContentArticle from '../components/ExternalContentArticle';
 import PostArticle from '../components/PostArticle';
 
-import { spaceId, environmentId, accessToken } from '../contentful';
+import { getRecentPublications } from '../queries'
 
 import styles from '../styles/Home.module.css'
-
-async function getRecentContent(count = 5) {
-  const limit = count < 25 ? count : 25;
-
-  const url = `https://cdn.contentful.com/spaces/${spaceId}/environments/${environmentId}/entries?access_token=${accessToken}&limit=${count}`;
-  const res = await fetch(url)
-  const data = await res.json()
-
-  return data.items;
-}
 
 function articleForContent(content) {
   switch(content.sys.contentType.sys.id) {
@@ -41,7 +31,7 @@ export default function Home({recentContent}) {
 }
 
 Home.getInitialProps = async (ctx) => {
-  const recentContent = await getRecentContent(3);
+  const recentContent = await getRecentPublications(3);
 
   return { recentContent };
 }

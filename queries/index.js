@@ -1,6 +1,8 @@
-import getPostBySlug from '../queries/getPostBySlug'
+import getPostBySlug from './getPostBySlug'
+import getRecentPublications from './getRecentPublications'
 
 
 export {
   getPostBySlug,
+  getRecentPublications,
 }
