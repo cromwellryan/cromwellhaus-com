@@ -1,18 +1,8 @@
 import { useRouter } from 'next/router'
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { BLOCKS, MARKS } from '@contentful/rich-text-types';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import { BLOCKS, MARKS } from '@contentful/rich-text-types'
 
-import { spaceId, environmentId, accessToken } from '../contentful';
-
-async function getPostData(slug) {
-  const postContentTypeId='post';
-
-  const url = `https://cdn.contentful.com/spaces/${spaceId}/environments/${environmentId}/entries?access_token=${accessToken}&content_type=${postContentTypeId}&limit=1&fields.slug=${slug}`
-  const res = await fetch(url)
-  const data = await res.json()
-
-  return data
-}
+import { getPostBySlug } from '../queries'
 
 function includedImage(imageContentId, includes) {
   const asset = includes.Asset.find(asset => asset.sys.id === imageContentId)
@@ -45,10 +35,5 @@ export default function Post({post, includes}) {
 }
 
 Post.getInitialProps = async (ctx) => {
-  const data = await getPostData(ctx.query.slug)
-
-  const post = data.items[0]
-  const includes = data.includes
-
-  return { post, includes }
+  return getPostBySlug(ctx.query.slug)
 }
