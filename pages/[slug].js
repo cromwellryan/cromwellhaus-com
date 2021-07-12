@@ -4,7 +4,7 @@ import { BLOCKS, MARKS } from '@contentful/rich-text-types'
 
 import { getPostBySlug } from '../queries'
 
-function includedImage(imageContentId, includes) {
+function renderIncludedAsset(imageContentId, includes) {
   const asset = includes.Asset.find(asset => asset.sys.id === imageContentId)
 
   return <img src={asset.fields.file.url} title={asset.fields.title} alt={asset.fields.description} />
@@ -18,7 +18,7 @@ export default function Post({post, includes}) {
 
   const options = {
     renderNode: {
-      [BLOCKS.EMBEDDED_ASSET]: (node, children) => includedImage(node.data.target.sys.id, includes)
+      [BLOCKS.EMBEDDED_ASSET]: (node, children) => renderIncludedAsset(node.data.target.sys.id, includes)
     },
     renderMark: {
       [MARKS.CODE]: text => <pre>{text}</pre>
