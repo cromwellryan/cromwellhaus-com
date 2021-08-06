@@ -7,7 +7,7 @@ import { getPostBySlug } from '../queries'
 function renderIncludedAsset(imageContentId, includes) {
   const asset = includes.Asset.find(asset => asset.sys.id === imageContentId)
 
-  return <img src={asset.fields.file.url} title={asset.fields.title} alt={asset.fields.description} />
+  return <img class="image" src={asset.fields.file.url} title={asset.fields.title} alt={asset.fields.description} />
 }
 
 export default function Post({post, includes}) {

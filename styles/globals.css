@@ -157,3 +157,10 @@ a.util-highlight {
 a.util-highlight:hover {
   text-decoration: underline;
 }
+
+.image {
+  width: 95%;
+  max-width: 100%;
+  height: auto;
+  margin-top: 2em;
+}
