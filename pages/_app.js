@@ -39,6 +39,7 @@ function MyApp({ Component, pageProps }) {
             </a>
           </h1>
           <nav className="header__nav">
+            <a className="nav__link" href="/archive">Archive</a>
             <a className="nav__link" href="/about">About</a>
           </nav>
         </div>
